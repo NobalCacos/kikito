@@ -8,11 +8,11 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-H97.aml</string>
+				<string>SSDT-H97N-WIFI.aml</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-H97.aml</string>
+				<string>SSDT-H97N-WIFI.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
