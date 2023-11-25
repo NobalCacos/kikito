@@ -21,8 +21,6 @@
 DefinitionBlock ("", "SSDT", 1, "vulgo", "h97nwifi", 0x0000FFFF)
 {
     External (_PR_.CPU0, DeviceObj)
-    External (_SB_.PCI0, DeviceObj)
-    External (_SB_.PCI0.LPCB, DeviceObj)
 
     Name (SLTP, Zero)
     Method (_TTS, 1, NotSerialized)  // _TTS: Transition To State
@@ -58,27 +56,6 @@ DefinitionBlock ("", "SSDT", 1, "vulgo", "h97nwifi", 0x0000FFFF)
                     One
                 })
             }
-        }
-    }
-
-    Scope (_SB.PCI0.LPCB)
-    {
-        Device (EC)
-        {
-            Name (_HID, EisaId ("PNP0C02") /* PNP Motherboard Resources */)  // _HID: Hardware ID
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Name (_UID, One)  // _UID: Unique ID
         }
     }
 }

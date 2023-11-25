@@ -23,9 +23,9 @@
 		<key>GA-H97N-WIFI: USB Ports on XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
 			<key>IOClass</key>
-			<string>AppleUSBMergeNub</string>
+			<string>AppleUSBHostMergeProperties</string>
 			<key>IONameMatch</key>
 			<string>XHC</string>
 			<key>IOProviderClass</key>
@@ -36,6 +36,14 @@
 				<false/>
 				<key>kUSBSleepSupported</key>
 				<true/>
+				<key>kUSBSleepPortCurrentLimit</key>
+				<integer>2100</integer>
+				<key>kUSBSleepPowerSupply</key>
+				<integer>5100</integer>
+				<key>kUSBWakePortCurrentLimit</key>
+				<integer>2100</integer>
+				<key>kUSBWakePowerSupply</key>
+				<integer>5100</integer>
 				<key>port-count</key>
 				<data>FQAAAA==</data>
 				<key>ports</key>

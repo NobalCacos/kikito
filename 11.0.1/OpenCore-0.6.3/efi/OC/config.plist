@@ -91,12 +91,6 @@
 				<key>compatible</key>
 				<string>pci8086,9c43</string>
 			</dict>
-			<!-- sat0 device compatible -->
-			<key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
-			<dict>
-				<key>compatible</key>
-				<string>pci8086,8c83</string>
-			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
