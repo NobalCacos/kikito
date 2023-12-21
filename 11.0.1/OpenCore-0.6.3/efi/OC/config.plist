@@ -79,7 +79,7 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<!-- ig-platform-id -->
+			<!-- igpu ig-platform-id -->
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -90,6 +90,12 @@
 			<dict>
 				<key>compatible</key>
 				<string>pci8086,9c43</string>
+			</dict>
+			<!-- hdef layout-id -->
+			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
+			<dict>
+				<key>layout-id</key>
+				<data>AwAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
