@@ -345,9 +345,9 @@
 		<key>Debug</key>
 		<dict>
 			<key>AppleDebug</key>
-			<true/>
+			<false/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
 			<key>DisableWatchDog</key>
 			<false/>
 			<key>DisplayDelay</key>
@@ -432,12 +432,8 @@
 			<dict>
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
-				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
-				<key>csr-active-config</key>
-				<data>Zw==</data>
 				<key>prev-lang:kbd</key>
 				<data></data>
 			</dict>
@@ -455,9 +451,7 @@
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
-				<string>boot-args</string>
 				<string>run-efi-updater</string>
-				<string>csr-active-config</string>
 			</array>
 		</dict>
 		<key>LegacyEnable</key>
