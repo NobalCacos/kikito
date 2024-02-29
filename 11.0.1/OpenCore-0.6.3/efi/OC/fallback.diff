@@ -1,0 +1,170 @@
+*** config.plist	Tue Nov 24 17:20:34 2020
+--- fallback.plist	Tue Nov 24 17:21:04 2020
+***************
+*** 279,285 ****
+  			<key>CustomSMBIOSGuid</key>
+  			<false/>
+  			<key>DisableIoMapper</key>
+! 			<false/>
+  			<key>DisableLinkeditJettison</key>
+  			<true/>
+  			<key>DisableRtcChecksum</key>
+--- 279,285 ----
+  			<key>CustomSMBIOSGuid</key>
+  			<false/>
+  			<key>DisableIoMapper</key>
+! 			<true/>
+  			<key>DisableLinkeditJettison</key>
+  			<true/>
+  			<key>DisableRtcChecksum</key>
+***************
+*** 303,309 ****
+  			<key>ThirdPartyDrives</key>
+  			<false/>
+  			<key>XhciPortLimit</key>
+! 			<false/>
+  		</dict>
+  		<key>Scheme</key>
+  		<dict>
+--- 303,309 ----
+  			<key>ThirdPartyDrives</key>
+  			<false/>
+  			<key>XhciPortLimit</key>
+! 			<true/>
+  		</dict>
+  		<key>Scheme</key>
+  		<dict>
+***************
+*** 326,338 ****
+  			<key>HibernateMode</key>
+  			<string>None</string>
+  			<key>HideAuxiliary</key>
+! 			<true/>
+  			<key>PickerAttributes</key>
+  			<integer>1</integer>
+  			<key>PickerAudioAssist</key>
+  			<false/>
+  			<key>PickerMode</key>
+! 			<string>External</string>
+  			<key>PollAppleHotKeys</key>
+  			<false/>
+  			<key>ShowPicker</key>
+--- 326,338 ----
+  			<key>HibernateMode</key>
+  			<string>None</string>
+  			<key>HideAuxiliary</key>
+! 			<false/>
+  			<key>PickerAttributes</key>
+  			<integer>1</integer>
+  			<key>PickerAudioAssist</key>
+  			<false/>
+  			<key>PickerMode</key>
+! 			<string>Builtin</string>
+  			<key>PollAppleHotKeys</key>
+  			<false/>
+  			<key>ShowPicker</key>
+***************
+*** 340,365 ****
+  			<key>TakeoffDelay</key>
+  			<integer>0</integer>
+  			<key>Timeout</key>
+! 			<integer>3</integer>
+  		</dict>
+  		<key>Debug</key>
+  		<dict>
+  			<key>AppleDebug</key>
+! 			<false/>
+  			<key>ApplePanic</key>
+! 			<false/>
+  			<key>DisableWatchDog</key>
+! 			<false/>
+  			<key>DisplayDelay</key>
+  			<integer>0</integer>
+  			<key>DisplayLevel</key>
+! 			<integer>2147483650</integer>
+  			<key>SerialInit</key>
+  			<false/>
+  			<key>SysReport</key>
+  			<false/>
+  			<key>Target</key>
+! 			<integer>0</integer>
+  		</dict>
+  		<key>Entries</key>
+  		<array/>
+--- 340,365 ----
+  			<key>TakeoffDelay</key>
+  			<integer>0</integer>
+  			<key>Timeout</key>
+! 			<integer>5</integer>
+  		</dict>
+  		<key>Debug</key>
+  		<dict>
+  			<key>AppleDebug</key>
+! 			<true/>
+  			<key>ApplePanic</key>
+! 			<true/>
+  			<key>DisableWatchDog</key>
+! 			<true/>
+  			<key>DisplayDelay</key>
+  			<integer>0</integer>
+  			<key>DisplayLevel</key>
+! 			<real>2147483650</real>
+  			<key>SerialInit</key>
+  			<false/>
+  			<key>SysReport</key>
+  			<false/>
+  			<key>Target</key>
+! 			<integer>67</integer>
+  		</dict>
+  		<key>Entries</key>
+  		<array/>
+***************
+*** 436,441 ****
+--- 436,443 ----
+  				<string>No</string>
+  				<key>prev-lang:kbd</key>
+  				<data></data>
++ 				<key>boot-args</key>
++ 				<string>-v keepsyms=1 debug=0x12a acpi_layer=0x08 acpi_level=0x02</string>
+  			</dict>
+  		</dict>
+  		<key>Delete</key>
+***************
+*** 452,457 ****
+--- 454,460 ----
+  			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+  			<array>
+  				<string>run-efi-updater</string>
++ 				<string>boot-args</string>
+  			</array>
+  		</dict>
+  		<key>LegacyEnable</key>
+***************
+*** 579,591 ****
+  			<key>ReconnectOnResChange</key>
+  			<false/>
+  			<key>ReplaceTabWithSpace</key>
+! 			<true/>
+  			<key>Resolution</key>
+  			<string>Max</string>
+  			<key>SanitiseClearScreen</key>
+  			<false/>
+  			<key>TextRenderer</key>
+! 			<string>SystemGraphics</string>
+  			<key>UgaPassThrough</key>
+  			<false/>
+  		</dict>
+--- 582,594 ----
+  			<key>ReconnectOnResChange</key>
+  			<false/>
+  			<key>ReplaceTabWithSpace</key>
+! 			<false/>
+  			<key>Resolution</key>
+  			<string>Max</string>
+  			<key>SanitiseClearScreen</key>
+  			<false/>
+  			<key>TextRenderer</key>
+! 			<string>BuiltinGraphics</string>
+  			<key>UgaPassThrough</key>
+  			<false/>
+  		</dict>
