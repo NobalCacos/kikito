@@ -353,7 +353,7 @@
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
-			<real>2147483650</real>
+			<integer>2147483650</integer>
 			<key>SerialInit</key>
 			<false/>
 			<key>SysReport</key>

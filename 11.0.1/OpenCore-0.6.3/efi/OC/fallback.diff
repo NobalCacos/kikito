@@ -1,5 +1,5 @@
 *** config.plist	Tue Nov 24 17:20:34 2020
---- fallback.plist	Tue Nov 24 17:21:04 2020
+--- fallback.plist	Tue Nov 24 18:02:57 2020
 ***************
 *** 279,285 ****
   			<key>CustomSMBIOSGuid</key>
@@ -64,7 +64,7 @@
   			<false/>
   			<key>ShowPicker</key>
 ***************
-*** 340,365 ****
+*** 340,355 ****
   			<key>TakeoffDelay</key>
   			<integer>0</integer>
   			<key>Timeout</key>
@@ -81,17 +81,7 @@
   			<key>DisplayDelay</key>
   			<integer>0</integer>
   			<key>DisplayLevel</key>
-! 			<integer>2147483650</integer>
-  			<key>SerialInit</key>
-  			<false/>
-  			<key>SysReport</key>
-  			<false/>
-  			<key>Target</key>
-! 			<integer>0</integer>
-  		</dict>
-  		<key>Entries</key>
-  		<array/>
---- 340,365 ----
+--- 340,355 ----
   			<key>TakeoffDelay</key>
   			<integer>0</integer>
   			<key>Timeout</key>
@@ -108,9 +98,16 @@
   			<key>DisplayDelay</key>
   			<integer>0</integer>
   			<key>DisplayLevel</key>
-! 			<real>2147483650</real>
-  			<key>SerialInit</key>
+***************
+*** 359,365 ****
+  			<key>SysReport</key>
   			<false/>
+  			<key>Target</key>
+! 			<integer>0</integer>
+  		</dict>
+  		<key>Entries</key>
+  		<array/>
+--- 359,365 ----
   			<key>SysReport</key>
   			<false/>
   			<key>Target</key>
