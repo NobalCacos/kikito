@@ -1,22 +1,5 @@
-*** config.plist	Tue Nov 24 17:20:34 2020
---- fallback.plist	Tue Nov 24 18:02:57 2020
-***************
-*** 279,285 ****
-  			<key>CustomSMBIOSGuid</key>
-  			<false/>
-  			<key>DisableIoMapper</key>
-! 			<false/>
-  			<key>DisableLinkeditJettison</key>
-  			<true/>
-  			<key>DisableRtcChecksum</key>
---- 279,285 ----
-  			<key>CustomSMBIOSGuid</key>
-  			<false/>
-  			<key>DisableIoMapper</key>
-! 			<true/>
-  			<key>DisableLinkeditJettison</key>
-  			<true/>
-  			<key>DisableRtcChecksum</key>
+*** config.plist	Thu Nov 26 15:13:07 2020
+--- fallback.plist	Thu Nov 26 15:16:42 2020
 ***************
 *** 303,309 ****
   			<key>ThirdPartyDrives</key>
@@ -116,28 +99,24 @@
   		<key>Entries</key>
   		<array/>
 ***************
-*** 436,441 ****
---- 436,443 ----
-  				<string>No</string>
+*** 437,443 ****
   				<key>prev-lang:kbd</key>
   				<data></data>
-+ 				<key>boot-args</key>
-+ 				<string>-v keepsyms=1 debug=0x12a acpi_layer=0x08 acpi_level=0x02</string>
+  				<key>boot-args</key>
+! 				<string>keepsyms=1</string>
+  				<key>csr-active-config</key>
+  				<data>fwAAAA==</data>
   			</dict>
-  		</dict>
-  		<key>Delete</key>
+--- 437,443 ----
+  				<key>prev-lang:kbd</key>
+  				<data></data>
+  				<key>boot-args</key>
+! 				<string>-v keepsyms=1 debug=0x12a acpi_layer=0x08 acpi_level=0x02</string>
+  				<key>csr-active-config</key>
+  				<data>fwAAAA==</data>
+  			</dict>
 ***************
-*** 452,457 ****
---- 454,460 ----
-  			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
-  			<array>
-  				<string>run-efi-updater</string>
-+ 				<string>boot-args</string>
-  			</array>
-  		</dict>
-  		<key>LegacyEnable</key>
-***************
-*** 579,591 ****
+*** 583,595 ****
   			<key>ReconnectOnResChange</key>
   			<false/>
   			<key>ReplaceTabWithSpace</key>
@@ -151,7 +130,7 @@
   			<key>UgaPassThrough</key>
   			<false/>
   		</dict>
---- 582,594 ----
+--- 583,595 ----
   			<key>ReconnectOnResChange</key>
   			<false/>
   			<key>ReplaceTabWithSpace</key>

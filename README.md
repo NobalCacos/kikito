@@ -9,7 +9,7 @@ OpenCore configuration for running macOS on the Gigabyte H97N-WIFI motherboard.
 | Field              | Value             |
 |:-------------------|------------------:|
 | Fast Boot          | Disabled          |
-| VT-d               | Disabled          |
+| VT-d               | Enabled           |
 | Windows 8 Features | Windows 8 WHQL    |
 | CSM Support        | Never             |
 | Secure Boot        | Disabled          |

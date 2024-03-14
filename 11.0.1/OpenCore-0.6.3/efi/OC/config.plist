@@ -279,7 +279,7 @@
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
-			<false/>
+			<true/>
 			<key>DisableLinkeditJettison</key>
 			<true/>
 			<key>DisableRtcChecksum</key>
@@ -297,7 +297,7 @@
 			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<true/>
+			<false/>
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
 			<key>ThirdPartyDrives</key>
@@ -436,6 +436,10 @@
 				<string>No</string>
 				<key>prev-lang:kbd</key>
 				<data></data>
+				<key>boot-args</key>
+				<string>keepsyms=1</string>
+				<key>csr-active-config</key>
+				<data>fwAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>

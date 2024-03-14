@@ -297,7 +297,7 @@
 			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<true/>
+			<false/>
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
 			<key>ThirdPartyDrives</key>
@@ -438,6 +438,8 @@
 				<data></data>
 				<key>boot-args</key>
 				<string>-v keepsyms=1 debug=0x12a acpi_layer=0x08 acpi_level=0x02</string>
+				<key>csr-active-config</key>
+				<data>fwAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -454,7 +456,6 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
 				<string>run-efi-updater</string>
-				<string>boot-args</string>
 			</array>
 		</dict>
 		<key>LegacyEnable</key>
