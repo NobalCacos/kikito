@@ -143,7 +143,7 @@ GenSMBIOS: [https://github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/G
 
 #### USB
 
-You should edit the USBPortInjector.kext ```Info.plist```. See [README-USBPortInjector.kext.md](https://github.com/vulgo/ga-h97n-wifi-hackintosh/blob/main/README-USBPortInjector.kext.md)
+Edit the USBPortInjector.kext ```Info.plist```. See [README-USBPortInjector.kext.md](https://github.com/vulgo/ga-h97n-wifi-hackintosh/blob/main/README-USBPortInjector.kext.md)
 
 # First boot
 
