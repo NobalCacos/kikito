@@ -17,18 +17,13 @@ This codeless kext injects the port map and power properties for the XHC on our 
 | HS02 | USB 3 Internal Header      |
 | HS03 | Rear Panel USB 3 Connector |
 | HS04 | Rear Panel USB 3 Connector |
-| HS05 | \*USB 2 Internal           |
-| HS06 | \*USB 2 Internal           |
+| HS05 | USB 2 Internal Header      |
+| HS06 | USB 2 Internal Header      |
 | HS07 | Rear Panel USB 2 Connector |
 | HS08 | Rear Panel USB 2 Connector |
 | HS09 | Rear Panel USB 3 Connector |
 | HS10 | Rear Panel USB 3 Connector |
-| HS11 | \*USB 2 Internal           |
-| HS12 | \*USB 2 Internal           |
-| HS13 | \*USB 2 Internal           |
-| HS14 | \*USB 2 Internal           |
-
-\* either 9 pin connector or mini PCIe, untested
+| HS11 | Mini PCI Express           |
 
 #### USB 3
 
@@ -41,8 +36,27 @@ This codeless kext injects the port map and power properties for the XHC on our 
 | SS05 | Rear Panel USB 3 Connector |
 | SS06 | Rear Panel USB 3 Connector |
 
+### Back Panel USB Layout
+
+by [grumat](https://github.com/grumat)
+
+```
+ -------------------------------------------------------------------------
+|  ------                                 __--__    __--__     ..     ..  |
+| | HS07 |    .-.     .-.                | LAN2 |  | LAN1 |   (Or)   (LI) |
+| |======|   (SMA)   (SMA)               | .... |  | .... |    ˜˜     ˜˜  |
+| | HS08 |    ˜-˜     ˜-˜     ________    ======    ======     ..     ..  |
+|  ------                     \=HDMI=/    ------    ------    (Bk)   (LO) |
+|    --     ---------------     ˜˜˜˜     | SS04 |  | SS06 |    ˜˜     ˜˜  |
+|  / PS \  | ######### ### |  ________   |======|  |======|  |˜˜˜˜|   ..  |
+|  \ /2 /  | ######### ### |  \=HDMI=/   | SS03 |  | SS05 |  |TosL|  (Mi) |
+|    --     \-------------/     ˜˜˜˜      ------    ------    ----    ˜˜  |
+ -------------------------------------------------------------------------
+ ```
+
 ## 15 Port Limit
 
 Disable the ports you aren't using by removing them from USBPortInjector.kext/Contents/Info.plist
 
-**Example:** If you are not using the internal 2.0 ports, then removing HS05, HS06, HS11, HS12, HS13, HS14 = 14 ports
+**Example:** If you are not using the internal 2.0 ports, then removing HS05, HS06 = 15 ports
+
