@@ -125,27 +125,6 @@
 						<key>port</key>
 						<data>CwAAAA==</data>
 					</dict>
-					<key>HS12</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>port</key>
-						<data>DAAAAA==</data>
-					</dict>
-					<key>HS13</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>port</key>
-						<data>DQAAAA==</data>
-					</dict>
-					<key>HS14</key>
-					<dict>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>port</key>
-						<data>DgAAAA==</data>
-					</dict>
 					<key>SSP1</key>
 					<dict>
 						<key>UsbConnector</key>
