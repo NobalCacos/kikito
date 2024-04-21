@@ -27,16 +27,12 @@ OpenCore configuration for running macOS on the Gigabyte H97N-WIFI motherboard.
 | Super IO Configuration &#8594; Serial Port A | Disabled |
 
 Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings)
-  
-# Before you boot
 
-#### OpenCore Sanity Checker
+## OpenCore Sanity Checker
 
 [https://opencore.slowgeek.com/](https://opencore.slowgeek.com/)
 
-![](https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/settings_input_hdmi/materialicons/36dp/1x/baseline_settings_input_hdmi_black_36dp.png)
-
-#### Graphics
+## Graphics
 
 Edit the ```DeviceProperties``` section of your config.plist so that the value for ```AAPL,ig-platform-id``` matches your configuration.
 
@@ -66,9 +62,7 @@ Edit the ```DeviceProperties``` section of your config.plist so that the value f
 
 Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#deviceproperties](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#deviceproperties)
 
-![](https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/hardware/desktop_mac/materialicons/36dp/1x/baseline_desktop_mac_black_36dp.png)
-
-#### SystemProductName
+## SystemProductName
 
 Edit the ```PlatformInfo``` section of your config.plist so that the value for ```SystemProductName``` matches your hardware.
 
@@ -96,9 +90,7 @@ Edit the ```PlatformInfo``` section of your config.plist so that the value for `
 
 Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)
 
-![](https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/search/materialicons/36dp/1x/baseline_search_black_36dp.png)
-
-#### SMBIOS
+## SMBIOS
 
 Edit the ```PlatformInfo``` section of your config.plist so that the ```MLB```, ```ROM```, ```SystemSerialNumber``` and ```SystemUUID``` values are unique to your machine.
 
@@ -139,13 +131,11 @@ Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.
 
 GenSMBIOS: [https://github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 
-![](https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/device/usb/materialicons/36dp/1x/baseline_usb_black_36dp.png)
-
-#### USB
+## USB
 
 Edit the USBPortInjector.kext ```Info.plist```. See [README-USBPortInjector.kext.md](https://github.com/vulgo/ga-h97n-wifi-hackintosh/blob/main/README-USBPortInjector.kext.md)
 
-# First boot
+## First boot
 
 At the picker, **press space**, choose **Reset NVRAM**.
 
