@@ -13,12 +13,12 @@ This codeless kext injects the port map and power properties for the XHC on our 
 
 | Port | Location                   |
 |:-----|:---------------------------|
-| HS01 | USB 3 Internal Header      |
-| HS02 | USB 3 Internal Header      |
+| HS01 | USB 3 Header               |
+| HS02 | USB 3 Header               |
 | HS03 | Rear Panel USB 3 Connector |
 | HS04 | Rear Panel USB 3 Connector |
-| HS05 | USB 2 Internal Header      |
-| HS06 | USB 2 Internal Header      |
+| HS05 | USB 2 Header               |
+| HS06 | USB 2 Header               |
 | HS07 | Rear Panel USB 2 Connector |
 | HS08 | Rear Panel USB 2 Connector |
 | HS09 | Rear Panel USB 3 Connector |
@@ -29,8 +29,8 @@ This codeless kext injects the port map and power properties for the XHC on our 
 
 | Port | Location                   |
 |:-----|:---------------------------|
-| SS01 | USB 3 Internal Header      |
-| SS02 | USB 3 Internal Header      |
+| SS01 | USB 3 Header               |
+| SS02 | USB 3 Header               |
 | SS03 | Rear Panel USB 3 Connector |
 | SS04 | Rear Panel USB 3 Connector |
 | SS05 | Rear Panel USB 3 Connector |
@@ -58,5 +58,5 @@ by [grumat](https://github.com/grumat)
 
 Disable the ports you aren't using by removing them from USBPortInjector.kext/Contents/Info.plist
 
-**Example:** If you are not using the internal 2.0 ports, then removing HS05, HS06 = 15 ports
+**Example:** If you are not using the USB 2 header ports, then removing HS05,HS06 = 15 ports
 
