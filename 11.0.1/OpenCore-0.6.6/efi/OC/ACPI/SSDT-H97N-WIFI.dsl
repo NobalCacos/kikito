@@ -15,7 +15,7 @@ DefinitionBlock ("", "SSDT", 1, "vulgo", "h97nwifi", 0x0000FFFF)
     
     Scope (_SB)
     {
-        Name (LPS0, One)
+        Name (LPS0, Zero)
     }
 
     Scope (_PR.CPU0)
