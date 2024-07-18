@@ -8,7 +8,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-PLUG.aml</string>
+				<string>Enable X86PlatformPlugin</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-SLPT.aml</string>
+				<string>Enable IOPMSystemSleepType property</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -91,16 +91,19 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<!-- IGPU: inject ig-platform-id -->
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BAASBA==</data>
 			</dict>
+			<!-- LPCB: inject compatible vdid -->
 			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
 			<dict>
 				<key>compatible</key>
 				<string>pci8086,9c43</string>
 			</dict>
+			<!-- HDEF: inject layout-id -->
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
 				<key>layout-id</key>
