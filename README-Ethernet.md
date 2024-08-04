@@ -48,7 +48,8 @@ Optionally remove from `/EFI/OC/Kexts`:
 
 When removing kexts from `/EFI/OC/Kexts` also remove the corresponding `<dict>` from `/EFI/OC/config.plist`, or change `<key>Enabled</key>` from `<true/>` to `<false/>`
 
-```
+```xml
+...
 <key>Kernel</key>
 <dict>
 	<key>Add</key>
@@ -112,4 +113,5 @@ When removing kexts from `/EFI/OC/Kexts` also remove the corresponding `<dict>` 
 	</array>
 	...
 </dict>
+...
 ```
