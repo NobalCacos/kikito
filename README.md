@@ -1,5 +1,7 @@
 # GA-H97N-WIFI hackintosh
 
+![Iris Pro 6200 on Gigabyte H97N-WIFI](https://raw.githubusercontent.com/vulgo/ga-h97n-wifi-hackintosh/main/Images/ga-h97n-wifi-broadwell.jpg)
+
 OpenCore configuration for running macOS on the Gigabyte H97N-WIFI motherboard.
 
 ## Firmware Settings
