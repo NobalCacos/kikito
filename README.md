@@ -1,8 +1,8 @@
-# GA-H97N-WIFI hackintosh
+# H97N-WIFI Hackintosh
 
-![Iris Pro 6200 on Gigabyte H97N-WIFI](https://raw.githubusercontent.com/vulgo/ga-h97n-wifi-hackintosh/main/Images/ga-h97n-wifi-broadwell.jpg)
+OpenCore configuration for running macOS on the Gigabyte GA-H97N-WIFI motherboard.
 
-OpenCore configuration for running macOS on the Gigabyte H97N-WIFI motherboard.
+This is for Haswell CPUs. For desktop Broadwell see [github.com/vulgo/h97n-wifi-broadwell-hackintosh](https://github.com/vulgo/h97n-wifi-broadwell-hackintosh)
 
 ## Firmware Settings
 
@@ -28,11 +28,11 @@ OpenCore configuration for running macOS on the Gigabyte H97N-WIFI motherboard.
 | XHCI Handoff                                 | Enabled  |
 | Super IO Configuration &#8594; Serial Port A | Disabled |
 
-Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings)
+Source: [dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings)
 
 ## OpenCore Sanity Checker
 
-[https://opencore.slowgeek.com/](https://opencore.slowgeek.com/)
+[opencore.slowgeek.com/](https://opencore.slowgeek.com/)
 
 ## Graphics
 
@@ -59,38 +59,9 @@ Edit the ```DeviceProperties``` section of your config.plist so that the value f
 | AAPL,ig-platform-id | Base64   | IGPU Configuration                    |
 |:--------------------|:---------|--------------------------------------:|
 | 0300220D            | AwAiDQ== | Attached display                      |
-| 04001204            | BAASBA== | Headless (discrete GPU)               |
-| 07002216            | BwAiFg== | Broadwell (attached display/headless) |
+| 04001204            | BAASBA== | Connectorless (using PCIe AMD GPU)    |
 
-Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#deviceproperties](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#deviceproperties)
-
-## SystemProductName
-
-Edit the ```PlatformInfo``` section of your config.plist so that the value for ```SystemProductName``` matches your hardware.
-
-```xml
-...
-<key>PlatformInfo</key>
-<dict>
-    ...
-    <key>Generic</key>
-    <dict>
-        ...
-        <key>SystemProductName</key>
-        <string>iMac15,1</string>
-        ...
-    </dict>
-    ...
-</dict>
-...
-````
-
-| CPU       | SystemProductName |
-|:----------|------------------:|
-| Haswell   | iMac15,1          |
-| Broadwell | iMac16,2          |
-
-Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)
+Source: [dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#deviceproperties](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#deviceproperties)
 
 ## SMBIOS
 
@@ -127,11 +98,11 @@ Edit the ```PlatformInfo``` section of your config.plist so that the ```MLB```, 
 | SystemSerialNumber           | \**Serial*                |
 | SystemUUID                   | \**SmUUID*                |
 
-\* *GenSMBIOS output, iMac15,1 (Haswell) or iMac16,2 (Broadwell)*
+\* *GenSMBIOS output, iMac15,1*
 
-Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)
+Source: [dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)
 
-GenSMBIOS: [https://github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+GenSMBIOS: [github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 
 ## USB
 
@@ -143,4 +114,4 @@ At the picker, **press space**, choose **Reset NVRAM**.
 
 ## Post-Install
 
-[https://dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)
+[dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)
