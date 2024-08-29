@@ -30,10 +30,6 @@ This is for Haswell CPUs. For desktop Broadwell see [github.com/vulgo/h97n-wifi-
 
 Source: [dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings)
 
-## OpenCore Sanity Checker
-
-[opencore.slowgeek.com/](https://opencore.slowgeek.com/)
-
 ## Graphics
 
 Edit the ```DeviceProperties``` section of your config.plist so that the value for ```AAPL,ig-platform-id``` matches your configuration.
