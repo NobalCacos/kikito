@@ -1,5 +1,37 @@
 OpenCore Changelog
 ==================
+#### v0.7.2
+- Fixed OSBundleLibraries/OSBundleLibaries64 handling
+- Added `GraphicsInputMirroring` to fix lost keystrokes in some non-Apple graphical UEFI apps
+- Added support for stack canaries (security cookies / stack guards)
+- Fixed unintialised memory access in AudioDxe causing audio playback failure
+- Changed `Default` Apple Secure Boot model to `x86legacy` for better security and compatibility
+- Increased default APFS `MinDate` and `MinVersion` to macOS Big Sur for better security
+- Updated builtin firmware versions for SMBIOS and the rest
+- Improved SSDT-PNLF compatibility with Windows and newer graphics
+- Fixed CLANGPDB OpenCore builds by shortening OC magic
+
+#### v0.7.1
+- Added `SyncTableIds` quirk to sync modified table OEM identifiers
+- Added CPU Info (MSRs) dumping to `SysReport`
+- Updated builtin firmware versions for SMBIOS and the rest
+- Fixed `PowerTimeoutKernelPanic` on macOS 12
+- Fixed transparency click detection on OpenCanopy boot entries
+- Added PCI device info dumping to `SysReport`
+- Fixed `SetApfsTrimTimeout` on macOS 12
+- Documented requirement for SetDefault.icns width to match Selector.icns width
+- Added explicit warn and safe fallback to builtin picker on failure to match the above
+- Added VSCode source level IDE debug config example to debug docs
+- Added other minor debug docs updates
+- Fixed incorrect timeout of built-in picker on IA32
+- Added support for custom kernels on ESP partition
+- Fixed DEBUG ASSERT on pressing change entry keys with single boot entry in OpenCanopy
+- Added recommended `Apple12` and `Windows11` flavours
+- Added `TpmInfo` tool to DEBUG TPM status
+- Fixed incorrect OpenCanopy initial display when default entry beyond right of screen
+- Fixed `ProvideCurrentCpuInfo` MSR patch on macOS 12
+- Fixed `AppleXcpmForceBoost` patch on macOS 12
+
 #### v0.7.0
 - Fixed NVRAM reset on firmware with write-protected `BootOptionSupport`
 - Improved direct GOP renderer performance for certain cases
