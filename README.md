@@ -90,7 +90,7 @@ Edit the ```PlatformInfo``` section of your config.plist so that the ```MLB```, 
 | PlatformInfo &#8594; Generic | Source                    |
 |:-----------------------------|--------------------------:|
 | MLB                          | \**Board Serial*          |
-| ROM                          | 6 bytes, e.g. MAC address |
+| ROM                          | \**Apple ROM*             |
 | SystemSerialNumber           | \**Serial*                |
 | SystemUUID                   | \**SmUUID*                |
 
