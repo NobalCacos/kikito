@@ -20,7 +20,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-SLPT.aml</string>
+				<string>SSDT-SLTP.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
