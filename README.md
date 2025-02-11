@@ -2,6 +2,12 @@
 
 OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherboard.
 
+#### Notes
+
+- Nvidia graphics cards are not supported
+- H97N-WIFI firmware has complete support for NVMe drives installed in the PCIe slot
+- If you want WiFi search the internet for mini-PCIe-m.2 adapters and Broadcom m.2 WiFi and bluetooth hardware with native macOS 12 support
+
 ## Firmware Settings
 
 #### BIOS Features
