@@ -1,10 +1,10 @@
 # SMBIOS
 
-## GenSMBIOS script
-
 > GenSMBIOS is a python script that uses acidanthera's `macserial` to generate SMBIOS and optionally saves them to a plist
 
-The model identifier used to generate serials should match `SystemProductName` in the `PlatformInfo` section of your `config.plist`
+The model identifier used to generate serials should match `SystemProductName` in the `PlatformInfo` section of your `config.plist`.
+
+Refer to [README-Intel-Graphics.md](/README/README-Intel-Graphics.md) if necessary.
 
 | Model Identifier  | Graphics Configuration |
 |:------------------|:-----------------------|
@@ -12,7 +12,9 @@ The model identifier used to generate serials should match `SystemProductName` i
 | iMac18,1          | Haswell HD Graphics    |
 | iMac16,2          | Broadwell Iris Pro     |
 
-GenSMBIOS: [github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+## Download GenSMBIOS
+
+[github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 
 ## Update config.plist
 

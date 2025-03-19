@@ -1,6 +1,6 @@
 # Intel Graphics
 
-Up to 2 monitors should work. Please use the HDMI ports and report any issues or preferably solutions to problems encountered.
+Both HDMI ports should work. Please report any issues or solutions to problems encountered.
 
 #### Sources
 

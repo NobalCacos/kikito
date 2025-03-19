@@ -12,7 +12,7 @@ After completing the OpenCore `config.plist` according to [README.md](/README.md
 #### Install USBPorts.kext to the Bootloader Kexts Directory
 
 - mount the EFI system partition
-- copy `USBPorts.kext` from the desktop to `/Volumes/EFI/EFI/OC/Kexts`
+- replace `USBPorts.kext` in `/Volumes/EFI/EFI/OC/Kexts` with the version from the desktop
 
 ### USB 2 Port Locations
 

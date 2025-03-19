@@ -21,7 +21,7 @@ When removing kexts from `/EFI/OC/Kexts` also remove the corresponding `<dict>` 
         ...
         <dict>
             <key>Arch</key>
-            <string>x86_64</string>
+            <string>Any</string>
             <key>BundlePath</key>
             <string>RealtekRTL8111.kext</string>
             <key>Comment</key>
@@ -35,7 +35,7 @@ When removing kexts from `/EFI/OC/Kexts` also remove the corresponding `<dict>` 
         </dict>
         <dict>
             <key>Arch</key>
-            <string>x86_64</string>
+            <string>Any</string>
             <key>BundlePath</key>
             <string>AtherosE2200Ethernet.kext</string>
             <key>Comment</key>
@@ -49,7 +49,7 @@ When removing kexts from `/EFI/OC/Kexts` also remove the corresponding `<dict>` 
         </dict>
         <dict>
             <key>Arch</key>
-            <string>x86_64</string>
+            <string>Any</string>
             <key>BundlePath</key>
             <string>IntelMausiEthernet.kext</string>
             <key>Comment</key>
