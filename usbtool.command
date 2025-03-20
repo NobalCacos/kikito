@@ -113,6 +113,9 @@ let kPortListRowSpacing: CGFloat = 9.0
 let kContentSpacing: CGFloat = 20.0
 let kWriteButtonTitle = "Write Bundle to Desktop"
 let kWriteSuccessFormatString = "Wrote bundle to %@"
+#if compiler(<5.5)
+let kIOMainPortDefault: mach_port_t = kIOMasterPortDefault
+#endif
 
 extension DispatchQueue {
 	static let work = DispatchQueue(label: "work")
@@ -127,11 +130,11 @@ extension FileHandle: TextOutputStream {
 extension FileManager {
 	public func directoryExists(atPath path: String) -> Bool {
 		var dir = ObjCBool(false)
-		return FileManager.default.fileExists(atPath: path, isDirectory: &dir) && dir.boolValue
+		return fileExists(atPath: path, isDirectory: &dir) && dir.boolValue
 	}
 	
 	public func desktopDirectoryURL() throws -> URL {
-		guard let url = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first else {
+		guard let url = urls(for: .desktopDirectory, in: .userDomainMask).first else {
 			throw RuntimeError("failed to obtain desktop directory URL")
 		}
 		
@@ -166,8 +169,8 @@ extension NSWindow {
 }
 
 extension PropertyListSerialization {
-        class func xml(from dictionary: [String: Any]) throws -> Data {
-                return try PropertyListSerialization.data(fromPropertyList: dictionary, format: .xml, options: 0)
+        class func xmlData(from dictionary: [String: Any]) throws -> Data {
+                return try Self.data(fromPropertyList: dictionary, format: .xml, options: 0)
         }
 }
 
@@ -284,20 +287,10 @@ final class BundleWriter {
 	}
 	
 	private lazy var modelIdentifier: String = {
-		var kIOMainPort: mach_port_t
-		
-		if #available(macOS 12.0, *) {
-			kIOMainPort = kIOMainPortDefault
-		} else {
-			kIOMainPort = kIOMasterPortDefault
-		}
-		
-		let entryPath = "IOService:/"
-		let modelKey = "model" as CFString
 		var identifier: String?
-		let entry = IORegistryEntryFromPath(kIOMainPort, entryPath)
+		let entry = IORegistryEntryFromPath(kIOMainPortDefault, "IOService:/")
 		
-		if let data = IORegistryEntryCreateCFProperty(entry, modelKey, kCFAllocatorDefault, 0)?.takeRetainedValue() as? Data {
+		if let data = IORegistryEntryCreateCFProperty(entry, "model" as CFString, kCFAllocatorDefault, 0)?.takeRetainedValue() as? Data {
 			identifier = String(data: data, encoding: .macOSRoman)?.filter { $0 != "\0"}
 		}
 		
@@ -339,25 +332,25 @@ final class BundleWriter {
 			]
 		}
 		
-		let personalities: [String: Any] = [
-			kDriverPersonalityKey: [
-				bundleIdentifierKey: driverBundleIdentifier,
-				kIOClassKey: driverClass,
-				kIONameMatchKey: kDriverIONameMatch,
-				kIOProviderClassKey: kDriverIOProviderClass,
-				modelIdentifierKey: modelIdentifier,
-				providerMergePropertiesKey: [
-					portCountKey: portCount.data,
-					portsKey: ports
-				]
+		let driverPersonality: [String: Any] = [
+			bundleIdentifierKey: driverBundleIdentifier,
+			kIOClassKey: driverClass,
+			kIONameMatchKey: kDriverIONameMatch,
+			kIOProviderClassKey: kDriverIOProviderClass,
+			modelIdentifierKey: modelIdentifier,
+			providerMergePropertiesKey: [
+				portCountKey: portCount.data,
+				portsKey: ports
 			]
 		]
 		
 		propertyList[bundleNameKey] = kBundleName
 		propertyList[bundleIdentifierKey] = kBundleIdentifier
-		propertyList[personalitiesKey] = personalities
+		propertyList[personalitiesKey] = [
+			kDriverPersonalityKey: driverPersonality
+		]
 
-		let data = try PropertyListSerialization.xml(from: propertyList)
+		let data = try PropertyListSerialization.xmlData(from: propertyList)
 		try bundle.createDirectories()
 		try bundle.writePropertyList(data: data)
 		try? bundle.updateModificationDate()
@@ -492,10 +485,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	private lazy var mainMenu: NSMenu = {
 		let processName = ProcessInfo.processInfo.processName
-		let menu = NSMenu(title: "Main Menu", items: [
-			NSMenuItem(title: processName)
-		])
-		menu.items[0].submenu = NSMenu(title: "Application Menu", items: [
+		let appMenu = NSMenuItem(title: processName)
+		appMenu.submenu = NSMenu(title: "Application Menu", items: [
 			NSMenuItem(title: "About \(processName)",
 				   action: #selector(NSApplication.orderFrontStandardAboutPanel(_:))),
 			NSMenuItem.separator(),
@@ -503,7 +494,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 				   action: #selector(NSApplication.terminate(_:)),
 				   keyEquivalent: "q")
 		])
-		return menu
+		return NSMenu(title: "Main Menu", items: [appMenu])
 	}()
 	
 	@objc func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
