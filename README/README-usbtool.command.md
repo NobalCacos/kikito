@@ -6,7 +6,7 @@ After completing the OpenCore `config.plist` according to [README.md](/README.md
 
 - boot the H97N-WIFI system into macOS
 - run `usbtool.command` located in the root directory of this repository
-- keep within the 15 port limit by switching off the ports that aren't being used
+- keep within the 15 port limit by switching off at least 2 ports
 - press the button to generate `USBPorts.kext` on the desktop
 
 #### Install USBPorts.kext to the Bootloader Kexts Directory
