@@ -1,5 +1,33 @@
 OpenCore Changelog
 ==================
+#### v0.7.6
+- Fixed stack canary support when compiling with GCC
+- Added automatic scaling factor detection
+- Explicitly restricted `ResizeAppleGpuBars` to 0 and -1
+- Fixed OpenCanopy long labels fade-out over graphics background
+- Fixed `ProvideConsoleGop` not disabling blit-only modes (e.g. on Z690)
+- Fixed Alder Lake SMBIOS CPU model information
+- Added XCPM CPU power management ACPI table for Intel Alder Lake
+- Updated draw order to avoid graphics tearing in OpenCanopy
+- Fixed handling PCI device paths with logical units in ScanPolicy
+- Added `ReconnectGraphicsOnConnect` option for enabling alternative UEFI graphics drivers
+- Added BiosVideo.efi driver to use with `ReconnectGraphicsOnConnect`
+- Changed `FadtEnableReset` to avoid unreliable keyboard controller reset
+- Added `EnableVmx` quirk to allow virtualization in other OS on some Macs
+- Upgraded `ProtectUefiServices` to prevent GRUB shim overwriting service pointers when chainloading with Secure Boot enabled
+- Removed deprecated SSDT-PNLFCFL
+- Fixed handling of zero-sized Memory Attributes Table
+
+#### v0.7.5
+- Revised OpenLinuxBoot documentation
+- Supported Linux ostree boot layout
+- Fixed external drive icons for Boot Entry Protocol
+- Added GPU Resize BAR quirks to reduce BARs on per-OS basis
+- Fixed OpenLinuxBoot hang bug after correct detection of some distros
+- Added DMG signature check during download, thx @jspraul and @zhangyoufu
+- Updated builtin firmware versions for SMBIOS and the rest
+- Updated recovery downloading commands to include macOS 11 and 12
+
 #### v0.7.4
 - Fixed Linux kernel sort order
 - Added Linux detection optional log detail
