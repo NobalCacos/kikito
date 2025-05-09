@@ -459,6 +459,7 @@ final class ViewController: NSViewController {
 		textField.drawsBackground = false
 		textField.isBezeled = false
 		textField.isEditable = false
+		textField.isSelectable = true
 		textField.textColor = NSColor.secondaryLabelColor
 		textField.stringValue = stringValue
 		textField.invalidateIntrinsicContentSize()
