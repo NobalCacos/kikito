@@ -123,7 +123,7 @@ extension DispatchQueue {
 
 extension FileHandle: TextOutputStream {
 	public func write(_ string: String) {
-		self.write(string.data(using: .utf8)!)
+		write(string.data(using: .utf8)!)
 	}
 }
 
@@ -487,7 +487,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	private lazy var mainMenu: NSMenu = {
 		let processName = ProcessInfo.processInfo.processName
 		let appMenu = NSMenuItem(title: processName)
-		appMenu.submenu = NSMenu(title: "Application Menu", items: [
+		let editMenu = NSMenuItem(title: "Edit")
+		appMenu.submenu = NSMenu(title: processName, items: [
 			NSMenuItem(title: "About \(processName)",
 				   action: #selector(NSApplication.orderFrontStandardAboutPanel(_:))),
 			NSMenuItem.separator(),
@@ -495,7 +496,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 				   action: #selector(NSApplication.terminate(_:)),
 				   keyEquivalent: "q")
 		])
-		return NSMenu(title: "Main Menu", items: [appMenu])
+		editMenu.submenu = NSMenu(title: "Edit", items: [
+			NSMenuItem(title: "Copy",
+				   action: #selector(NSText.copy(_:)),
+				   keyEquivalent: "c")
+		])
+		return NSMenu(title: "Main Menu", items: [appMenu, editMenu])
 	}()
 	
 	@objc func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
