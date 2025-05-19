@@ -29,11 +29,11 @@ Edit the ```PlatformInfo``` section of your ```config.plist``` so that the ```Sy
 ...
 ````
 
-| SystemProductName | Graphics Configuration | Intel Framebuffer |
-|:------------------|:-----------------------|:------------------|
-| iMac18,1          | Haswell HD Graphics    | Attached display  |
-| iMac16,2          | Broadwell Iris Pro     | Attached display  |
-| iMac18,2          | PCIe graphics card     | Connectorless     |
+| SystemProductName | Graphics Configuration     | Intel Framebuffer |
+|:------------------|:---------------------------|:------------------|
+| iMac18,1          | Haswell HD Graphics        | Attached display  |
+| iMac16,2          | Broadwell                  | Attached display  |
+| iMac18,2          | Haswell PCIe graphics card | Connectorless     |
 
 ## Haswell HD Graphics Device Properties
 
@@ -75,7 +75,7 @@ Edit the `DeviceProperties` section of your `config.plist` according to your con
 
 ### Haswell Connectorless
 
-> When a supported PCIe graphics card is installed it is recommended to configure the Haswell iGPU with the connectorless framebuffer.
+> When a supported PCIe graphics card is installed it is recommended to configure the Haswell iGPU to use a connectorless framebuffer.
 
 > Haswell connectorless configurations use the `iMac18,2` model identifier.
 

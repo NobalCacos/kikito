@@ -5,8 +5,8 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 #### Notes
 
 - Nvidia graphics cards are [no longer supported](/README/README-Nvidia.md)
-- H97N-WIFI firmware has complete support for NVMe drives installed in the PCIe slot
-- WiFi/Bluetooth works natively in macOS 12 using m.2 Broadcom BCM94360NG and mini-PCIe-m.2 adapter
+- H97N-WIFI firmware supports NVMe devices in the x16 PCIe slot
+- WiFi and Bluetooth work natively in macOS 12 using an m.2 Broadcom BCM94360NG and mini-PCIe-m.2 adapter
 
 ## Firmware Settings
 
@@ -26,17 +26,19 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 |:---------------------------------------------|---------:|
 | XHCI Mode                                    | Enabled  |
 | Intel Processor Graphics                     | Enabled  |
-| Intel Processor Graphics Memory Allocation   | 96M      |
+| Intel Processor Graphics Memory Allocation   | 96M*     |
 | DVMT Total Memory Size                       | MAX      |
 | Legacy USB Support                           | Disabled |
 | XHCI Handoff                                 | Enabled  |
 | Super IO Configuration &#8594; Serial Port A | Disabled |
 
+*\* 96M Broadwell, 64M Haswell HD Graphics, 32M Haswell connectorless*
+
 Source: [dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#intel-bios-settings)
 
 ## Graphics
 
-The default configuration targets discrete AMD graphics + Haswell iGPU using a connectorless framebuffer.
+The default `config.plist` targets systems with discrete AMD graphics while the Haswell iGPU uses a connectorless framebuffer.
 
 > If your system is AMD + Haswell connectorless then graphics-related changes to the default ```config.plist``` may not be required
 
@@ -54,12 +56,14 @@ At the picker, **press space**, choose ```Reset NVRAM```.
 
 Reset NVRAM at first boot and **whenever the bootloader files have changed**.
 
-## USB
+## Post-Install
+
+### USB
 
 Generate a valid ```USBPorts.kext```.
 
 Refer to [README-usbtool.command.md](/README/README-usbtool.command.md)
 
-## Post-Install
+### Dortania Post-Install
 
-[dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)
+Refer to [dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)

@@ -1,6 +1,6 @@
 # usbtool.command
 
-After completing the OpenCore `config.plist` according to [README.md](/README.md), [README-Intel-Graphics.md](/README/README-Intel-Graphics.md) and [README-SMBIOS.md](/README/README-SMBIOS.md) the following procedure will generate a valid `USBPorts.kext`
+After completing the OpenCore `config.plist` according to [README.md](/README.md) and installing macOS, the following procedure will generate a valid `USBPorts.kext`
 
 #### Run usbtool.command
 

@@ -6,11 +6,11 @@ The model identifier used to generate serials should match `SystemProductName` i
 
 Refer to [README-Intel-Graphics.md](/README/README-Intel-Graphics.md) if necessary.
 
-| Model Identifier  | Graphics Configuration |
-|:------------------|:-----------------------|
-| iMac18,2          | PCIe graphics card     |
-| iMac18,1          | Haswell HD Graphics    |
-| iMac16,2          | Broadwell Iris Pro     |
+| Model Identifier | Graphics Configuration     |
+|:-----------------|:---------------------------|
+| iMac18,2         | Haswell PCIe graphics card |
+| iMac18,1         | Haswell HD Graphics        |
+| iMac16,2         | Broadwell                  |
 
 ## Download GenSMBIOS
 
