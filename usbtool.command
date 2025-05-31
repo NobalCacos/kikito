@@ -407,15 +407,19 @@ final class ViewController: NSViewController {
 	}
 	
 	override func viewDidLoad() {
+		let portListViewLeading = kContentSpacing + kPortListEdgeInsets.left
+		let portListViewTrailing = -(kContentSpacing + kPortListEdgeInsets.right)
+		let portListViewTop = kContentSpacing + kPortListEdgeInsets.top
+		let portListViewBottom = -(kContentSpacing + kPortListEdgeInsets.bottom)
 		view.subviews = [portListView, writeButton]
 		writeButton.target = self
-		writeButton.action = #selector(ViewController.writeButtonPressed(_:))
+		writeButton.action = #selector(Self.writeButtonPressed(_:))
 		enableWriteButton()
 		NSLayoutConstraint.activate([
-			portListView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: (kContentSpacing + kPortListEdgeInsets.left)),
-			portListView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -(kContentSpacing + kPortListEdgeInsets.right)),
-			portListView.topAnchor.constraint(equalTo: view.topAnchor, constant: (kContentSpacing + kPortListEdgeInsets.top)),
-			portListView.bottomAnchor.constraint(equalTo: writeButton.topAnchor, constant: -(kContentSpacing + kPortListEdgeInsets.bottom)),
+			portListView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: portListViewLeading),
+			portListView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: portListViewTrailing),
+			portListView.topAnchor.constraint(equalTo: view.topAnchor, constant: portListViewTop),
+			portListView.bottomAnchor.constraint(equalTo: writeButton.topAnchor, constant: portListViewBottom),
 			writeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -kContentSpacing),
 			writeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -kContentSpacing)
 		])
