@@ -1,5 +1,7 @@
 # usbtool.command
 
+<img src="usbtool.png" width="472" height="629" alt="USB Tool screenshot" />
+
 After completing the OpenCore `config.plist` according to [README.md](/README.md) and installing macOS, the following procedure will generate a valid `USBPorts.kext`
 
 #### Run usbtool.command

@@ -67,3 +67,14 @@ Refer to [README-usbtool.command.md](/README/README-usbtool.command.md)
 ### Dortania Post-Install
 
 Refer to [dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)
+
+## Credits
+
+- [acidanthera](https://github.com/acidanthera)
+- [apple](https://github.com/apple)
+- [corpnewt](https://github.com/corpnewt)
+- [dortania](https://github.com/dortania)
+- [mieze](https://github.com/Mieze)
+- [Piker-Alpha](https://github.com/Piker-Alpha)
+- [RehabMan](https://github.com/RehabMan)
+
