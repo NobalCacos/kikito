@@ -472,9 +472,9 @@ final class ViewController: NSViewController {
 		view = USBTool.mainWindow.contentView!
 	}
 	
-	override func viewDidLoad() {
-		view.subviews = [portListView, writeButton]
+	private func activateLayoutConstraints() {
 		NSLayoutConstraint.activate([
+			view.widthAnchor.constraint(greaterThanOrEqualToConstant: kWindowWidth),
 			portListView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPortListViewLeading),
 			portListView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: kPortListViewTrailing),
 			portListView.topAnchor.constraint(equalTo: view.topAnchor, constant: kPortListViewTop),
@@ -482,6 +482,11 @@ final class ViewController: NSViewController {
 			writeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -kContentSpacing),
 			writeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -kContentSpacing)
 		])
+	}
+	
+	override func viewDidLoad() {
+		view.subviews = [portListView, writeButton]
+		activateLayoutConstraints()
 		enableWriteButton()
 	}
 	
@@ -553,7 +558,6 @@ struct USBTool {
 		window.styleMask = [.titled, .closable]
 		window.miniaturizeButton?.isHidden = true
 		window.zoomButton?.isHidden = true
-		window.contentView?.widthAnchor.constraint(greaterThanOrEqualToConstant: kWindowWidth).isActive = true
 		return window
 	}()
 	
