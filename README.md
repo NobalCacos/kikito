@@ -4,6 +4,7 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 
 #### Notes
 
+- [TextMate](https://macromates.com/) ([github.com/textmate/textmate](https://github.com/textmate/textmate)) is free software useful for editing `config.plist`
 - Nvidia graphics cards are [no longer supported](/README/README-Nvidia.md)
 - H97N-WIFI firmware supports NVMe devices in the x16 PCIe slot
 - WiFi and Bluetooth work natively in macOS 12 using an m.2 Broadcom BCM94360NG and mini-PCIe-m.2 adapter
