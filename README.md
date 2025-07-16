@@ -65,6 +65,12 @@ Generate a valid ```USBPorts.kext```.
 
 Refer to [README-usbtool.command.md](/README/README-usbtool.command.md)
 
+### NVMe
+
+> NVMeFix is a set of patches for the Apple NVMe storage driver, IONVMeFamily. Its goal is to improve compatibility with non-Apple SSDs.
+
+Refer to [github.com/acidanthera/NVMeFix](https://github.com/acidanthera/NVMeFix/)
+
 ### Dortania Post-Install
 
 Refer to [dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)
