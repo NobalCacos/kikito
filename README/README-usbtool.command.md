@@ -16,7 +16,9 @@ After completing the OpenCore `config.plist` according to [README.md](/README.md
 - mount the EFI system partition
 - replace `USBPorts.kext` in `/Volumes/EFI/EFI/OC/Kexts` with the version from the desktop
 
-### USB 2 Port Locations
+## Port Locations
+
+<details><summary><strong>USB 2</strong></summary><br>
 
 | Port | Location                   |
 |:-----|:---------------------------|
@@ -32,7 +34,9 @@ After completing the OpenCore `config.plist` according to [README.md](/README.md
 | HS10 | Rear panel USB 3 connector |
 | HS11 | Mini PCI express           |
 
-### USB 3 Port Locations
+<br></details>
+
+<details><summary><strong>USB 3</strong></summary><br>
 
 | Port | Location                   |
 |:-----|:---------------------------|
@@ -43,9 +47,9 @@ After completing the OpenCore `config.plist` according to [README.md](/README.md
 | SSP5 | Rear panel USB 3 connector |
 | SSP6 | Rear panel USB 3 connector |
 
-### Rear Panel Layout
+<br></details>
 
-by [grumat](https://github.com/grumat)
+<details><summary><strong>Rear Panel</strong></summary><br>
 
 ```text
  -------------------------------------------------------------------------
@@ -60,3 +64,6 @@ by [grumat](https://github.com/grumat)
 |    --     \-------------/     ˜˜˜˜      ------    ------    ----    ˜˜  |
  -------------------------------------------------------------------------
  ```
+Layout by [grumat](https://github.com/grumat)
+
+</details>

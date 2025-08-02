@@ -35,11 +35,11 @@ Edit the ```PlatformInfo``` section of your ```config.plist``` so that the ```Sy
 | iMac16,2          | Broadwell                  | Attached display  |
 | iMac18,2          | Haswell PCIe graphics card | Connectorless     |
 
-## Haswell HD Graphics Device Properties
+## iGPU Device Properties
 
 Edit the `DeviceProperties` section of your `config.plist` according to your configuration.
 
-### Haswell Attached Display
+<details><summary><strong>Haswell HD Graphics</strong></summary><br>
 
 > Haswell attached display configurations use the `iMac18,1` model identifier.
 
@@ -73,35 +73,11 @@ Edit the `DeviceProperties` section of your `config.plist` according to your con
 ...
 ```
 
-### Haswell Connectorless
+</details>
 
-> When a supported PCIe graphics card is installed it is recommended to configure the Haswell iGPU to use a connectorless framebuffer.
+<details><summary><strong>Broadwell</strong></summary><br>
 
-> Haswell connectorless configurations use the `iMac18,2` model identifier.
-
-```xml
-...
-<key>DeviceProperties</key>
-<dict>
-    <key>Add</key>
-    <dict>
-        ...
-        <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-        <dict>
-            <key>AAPL,ig-platform-id</key>
-            <data>BAASBA==</data>
-        </dict>
-        ...
-    </dict>
-</dict>
-...
-```
-
-## Broadwell Iris Pro Device Properties
-
-Edit the `DeviceProperties` section of your `config.plist`.
-
-> Broadwell configurations use the `iMac16,2` model identifier. Discrete graphics cards should also be working with these properties.
+> Broadwell Iris Pro configurations use the `iMac16,2` model identifier. Discrete graphics cards should also be working with these properties.
 
 ```xml
 ...
@@ -132,3 +108,29 @@ Edit the `DeviceProperties` section of your `config.plist`.
 </dict>
 ...
 ```
+
+</details>
+
+<details><summary><strong>Haswell PCIe graphics card</strong></summary><br>
+
+> When a supported PCIe graphics card is installed it is recommended to configure the Haswell iGPU to use a connectorless framebuffer. Haswell connectorless configurations use the `iMac18,2` model identifier.
+
+```xml
+...
+<key>DeviceProperties</key>
+<dict>
+    <key>Add</key>
+    <dict>
+        ...
+        <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+        <dict>
+            <key>AAPL,ig-platform-id</key>
+            <data>BAASBA==</data>
+        </dict>
+        ...
+    </dict>
+</dict>
+...
+```
+
+</details>

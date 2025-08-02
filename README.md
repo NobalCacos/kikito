@@ -2,12 +2,26 @@
 
 OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherboard.
 
-#### Notes
-
+<details><summary><strong>Notes</strong></summary><br>
+  
 - [TextMate](https://macromates.com/) ([github.com/textmate/textmate](https://github.com/textmate/textmate)) is free software useful for editing `config.plist`
 - Nvidia graphics cards are [no longer supported](/README/README-Nvidia.md)
 - H97N-WIFI firmware supports NVMe devices in the x16 PCIe slot
 - WiFi and Bluetooth work natively in macOS 12 using an m.2 Broadcom BCM94360NG and mini-PCIe-m.2 adapter
+
+</details>
+
+<details><summary><strong>Credits</strong></summary><br>
+
+- [acidanthera](https://github.com/acidanthera)
+- [apple](https://github.com/apple)
+- [corpnewt](https://github.com/corpnewt)
+- [dortania](https://github.com/dortania)
+- [mieze](https://github.com/Mieze)
+- [Piker-Alpha](https://github.com/Piker-Alpha)
+- [RehabMan](https://github.com/RehabMan)
+
+</details>
 
 ## Firmware Settings
 
@@ -74,14 +88,3 @@ Refer to [github.com/acidanthera/NVMeFix](https://github.com/acidanthera/NVMeFix
 ### Dortania Post-Install
 
 Refer to [dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)
-
-## Credits
-
-- [acidanthera](https://github.com/acidanthera)
-- [apple](https://github.com/apple)
-- [corpnewt](https://github.com/corpnewt)
-- [dortania](https://github.com/dortania)
-- [mieze](https://github.com/Mieze)
-- [Piker-Alpha](https://github.com/Piker-Alpha)
-- [RehabMan](https://github.com/RehabMan)
-
