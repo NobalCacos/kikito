@@ -105,13 +105,13 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<!-- Add iGPU properties -->
+			<!-- Intel Graphics: add device properties -->
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BAASBA==</data>
 			</dict>
-			<!-- Add HDEF layout-id -->
+			<!-- Built in audio: add layout-id -->
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
 				<key>layout-id</key>
@@ -610,7 +610,7 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
-				<string>HFS+ Driver</string>
+				<string>Apple HFS+ driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -620,7 +620,7 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
-				<string></string>
+				<string>OC RT driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -630,7 +630,7 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
-				<string></string>
+				<string>OC graphical UI</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
