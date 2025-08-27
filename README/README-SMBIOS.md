@@ -1,6 +1,6 @@
 # SMBIOS
 
-> GenSMBIOS is a python script that uses acidanthera's `macserial` to generate SMBIOS and optionally saves them to a plist
+OpenCore will generate a complete [SMBIOS](https://en.wikipedia.org/wiki/System_Management_BIOS) for your system according to information provided in the `PlatformInfo` section of `config.plist` and a dataset derived from Apple firmwares. `GenSMBIOS` is a python script that uses acidanthera's `macserial` to generate required serials and unique identifiers.
 
 The model identifier used to generate serials should match `SystemProductName` in the `PlatformInfo` section of your `config.plist`.
 
