@@ -2,11 +2,13 @@
 
 Both HDMI ports should work. Please report any issues or solutions to problems encountered.
 
-#### Sources
+<details><summary><strong>Sources</strong></summary><br>
 
 - [acidanthera/WhateverGreen/README](https://github.com/acidanthera/WhateverGreen/blob/master/README.md)
 - [acidanthera/WhateverGreen/FAQ/IntelHD](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)
 - [acidanthera/WhateverGreen/FAQ/Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md)
+
+</details>
 
 ## Model Identifier
 
