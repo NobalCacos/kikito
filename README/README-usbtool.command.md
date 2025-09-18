@@ -49,7 +49,7 @@ After completing the OpenCore `config.plist` according to [README.md](/README.md
 
 <br></details>
 
-<details><summary><strong>Rear Panel</strong></summary><br>
+<details><summary><strong>Rear Panel Layout</strong> by <a href="https://github.com/grumat">grumat</a></summary><br>
 
 ```text
  -------------------------------------------------------------------------
@@ -64,6 +64,3 @@ After completing the OpenCore `config.plist` according to [README.md](/README.md
 |    --     \-------------/     ˜˜˜˜      ------    ------    ----    ˜˜  |
  -------------------------------------------------------------------------
  ```
-Layout by [grumat](https://github.com/grumat)
-
-</details>
