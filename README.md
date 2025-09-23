@@ -11,6 +11,30 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 
 </details>
 
+<details><summary><strong>In-scope</strong></summary><br>
+
+- Supported graphics hardware
+- Built-in audio
+- Built-in ethernet ports
+- Wireless hardware natively supported
+- macOS installation
+- Built-in USB ports
+- Sleep, wake, shutdown (ACPI S0, S3, S5)
+
+</details>
+    
+<details><summary><strong>Out-of-scope</strong></summary><br>
+
+- UEFI Secure Boot
+- [Security and FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html)
+- Wireless hardware not natively supported
+- [CPU power management](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md/)
+- [DRM and hardware video decoding or encoding](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md/)
+- [NVMe problems](https://github.com/acidanthera/NVMeFix/)
+- Hibernation (ACPI S4)
+
+</details>
+
 <details><summary><strong>Credits</strong></summary><br>
 
 - [acidanthera](https://github.com/acidanthera)
