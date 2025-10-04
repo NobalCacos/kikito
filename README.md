@@ -26,11 +26,12 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
     
 <details><summary><strong>Out-of-scope</strong></summary><br>
 
+- [Apple ID problems](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html)
 - UEFI Secure Boot
 - [Security and FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html)
 - Wireless hardware not natively supported
-- [DRM and hardware video decoding or encoding](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md/)
-- [NVMe problems](https://github.com/acidanthera/NVMeFix/)
+- [DRM and hardware video decoding or encoding](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md)
+- [NVMe problems](https://github.com/acidanthera/NVMeFix)
 - Hibernation (ACPI S4)
 
 </details>
