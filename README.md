@@ -13,14 +13,15 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 
 <details><summary><strong>In-scope</strong></summary><br>
 
-- Supported graphics hardware
+- Accelerated video on supported Intel and AMD GPUs
 - Built-in audio
-- Built-in ethernet ports
-- Wireless hardware natively supported
+- Built-in ethernet
+- Airport and Bluetooth using a natively supported device
 - CPU power management
-- macOS installation
-- Built-in USB ports
-- Sleep, wake, shutdown (ACPI S0, S3, S5)
+- USB
+- System wake, sleep, and shutdown
+- macOS installation and updates
+- System stability
 
 </details>
     
@@ -29,10 +30,9 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 - [Apple ID problems](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html)
 - UEFI Secure Boot
 - [Security and FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html)
-- Wireless hardware not natively supported
+- Airport and Bluetooth using a device that is not natively supported
 - [DRM and hardware video decoding or encoding](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md)
 - [NVMe problems](https://github.com/acidanthera/NVMeFix)
-- Hibernation (ACPI S4)
 
 </details>
 
@@ -78,9 +78,9 @@ Source: [dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#int
 
 ## Graphics
 
-The default `config.plist` targets systems with discrete AMD graphics while the Haswell iGPU uses a connectorless framebuffer.
+The default `config.plist` in this repo targets Haswell systems with a supported AMD graphics card.
 
-> If your system is AMD + Haswell connectorless then graphics-related changes to the default ```config.plist``` may not be required
+> If your system is AMD + Haswell connectorless iGPU then graphics-related changes to the default ```config.plist``` may not be required
 
 In all other cases, refer to [README-Intel-Graphics.md](/README/README-Intel-Graphics.md)
 
