@@ -13,7 +13,7 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 
 <details><summary><strong>In-scope</strong></summary><br>
 
-- Accelerated video on supported Intel and AMD GPUs
+- Accelerated graphics on supported Intel and AMD GPUs
 - Built-in audio
 - Built-in ethernet
 - Airport and Bluetooth using a natively supported device
