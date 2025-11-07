@@ -1,9 +1,11 @@
 # H97N-WIFI Hackintosh
 
-OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherboard.
+OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherboard. Without obsolete or cosmetic patches, the goal is simply macOS 12 working well on compatible hardware.
 
 <details><summary><strong>Notes</strong></summary><br>
-  
+
+- For features listed as `in-scope` that are not working as expected, it may be beneficial for all to open an issue here
+- Where something is listed as `out-of-scope` more explicit information will surely be found in various places across the internet, or in the OpenCore documentation
 - [TextMate](https://macromates.com/) ([github.com/textmate/textmate](https://github.com/textmate/textmate)) is free software useful for editing `config.plist`
 - Nvidia graphics cards are [no longer supported](/README/README-Nvidia.md)
 - H97N-WIFI firmware supports NVMe devices in the x16 PCIe slot
