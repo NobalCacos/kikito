@@ -13,7 +13,7 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 
 </details>
 
-<details><summary><strong>In-scope</strong></summary><br>
+<details><summary><strong><code>in-scope</code></strong></summary><br>
 
 - Accelerated graphics on supported Intel and AMD GPUs
 - Built-in audio
@@ -26,12 +26,12 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 - System stability
 
 </details>
-    
-<details><summary><strong>Out-of-scope</strong></summary><br>
+
+<details><summary><strong><code>out-of-scope</code></strong></summary><br>
 
 - [Apple ID problems](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html)
 - UEFI Secure Boot
-- [Security and FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html)
+- [OpenCore Security and FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html)
 - Airport and Bluetooth using a device that is not natively supported
 - [DRM and hardware video decoding or encoding](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md)
 - [NVMe problems](https://github.com/acidanthera/NVMeFix)
