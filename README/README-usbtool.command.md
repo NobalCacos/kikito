@@ -2,6 +2,18 @@
 
 <img src="usbtool.png" width="472" height="629" alt="USB Tool screenshot" />
 
+<details><summary><strong>What's this?</strong></summary>
+
+`usbtool.command` is basically a graphical property list editor exposing a hard-coded list of all 17 USB ports available on H97N-WIFI. The generated `USBPorts.kext` is intended to be used in combination with `SSDT-USBX` in this repository. Faking an `EC` device for `USBX` is not required on recent macOS.
+
+ - `IOUSBHostFamily` class `AppleUSBHostResources` resource-matches on `IORTC`
+ - `AppleUSBHostResources` takes care of the host controller power-related device properties provided by device `USBX` in `SSDT-USBX`
+ - `USBPorts.kext` matches on device `XHC` and is intended to provide port mapping of 15 or fewer ports
+
+<br>
+
+</details>
+
 After completing the OpenCore `config.plist` according to [README.md](/README.md) and installing macOS, the following procedure will generate a valid `USBPorts.kext`
 
 #### Run usbtool.command
