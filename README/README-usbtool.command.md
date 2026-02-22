@@ -1,6 +1,6 @@
 # usbtool.command
 
-<img src="usbtool.png" width="472" height="629" alt="USB Tool screenshot" />
+<img src="usbtool.png" width="472" alt="USB Tool screenshot" />
 
 <details><summary><strong>What's this?</strong></summary>
 
