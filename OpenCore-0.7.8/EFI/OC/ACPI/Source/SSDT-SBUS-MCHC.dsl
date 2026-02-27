@@ -1,73 +1,44 @@
-DefinitionBlock ("", "SSDT", 1, "vulgo", "SbMcSsdt", 1)
+/*
+ *  Enables AppleSMBusController, adds MCHC device
+ */
+
+DefinitionBlock ("", "SSDT", 1, "vulgo", "SMBusMC", 1)
 {
     External (_SB_.PCI0, DeviceObj)
-
     External (_SB_.PCI0.SBUS, DeviceObj)
 
     If (_OSI ("Darwin"))
     {
-        Scope (\)
+        Device (_SB.PCI0.MCHC)
         {
-            Method (DTGP, 5, NotSerialized)
-            {
-                If (Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b"))
-                {                
-                    If (Arg1 == One && Arg2 == Zero)
-                    {
-                        Arg4 = Buffer () { 0x3 }
-                    
-                        Return (One)
-                    }
-                    
-                    If (Arg1 == One && Arg2 == One)
-                    {
-                        Return (One)
-                    }
-                }
-
-                Arg4 = Buffer () { Zero }
-                
-                Return (Zero)
-            }
+            Name (_ADR, Zero)
+            Name (_STA, 0xF)
         }
 
-        Scope (\_SB.PCI0)
+        Device (_SB.PCI0.SBUS.BUS0)
         {
-            Device (MCHC)
-            {
-                Name (_ADR, Zero)
-                Name (_STA, 0xF)
-            }
+            Name (_STA, 0xF)
+            Name (_CID, "smbus")
+            Name (_ADR, Zero)
         }
-
-        Scope (\_SB.PCI0.SBUS)
+            
+        Device (_SB.PCI0.SBUS.BUS0.DVL0)
         {
-            Device (BUS0)
+            Name (_ADR, 0x57)
+            Name (_CID, "diagsvault")
+        }
+        
+        Method (_SB.PCI0.SBUS.BUS0.DVL0._DSM, 4, NotSerialized)
+        {
+            If (!Arg2)
             {
-                Name (_STA, 0xF)
-                Name (_CID, "smbus")
-                Name (_ADR, Zero)
+                Return (Buffer (One) { 0x57 })
             }
-                
-            Device (BUS0.DVL0)
-            {
-                Name (_ADR, 0x52)
-                Name (_CID, "diagsvault")
-                
-                Method (_DSM, 4, NotSerialized)
-                {
-                    If (!Arg2)
-                    {
-                        Return (Buffer () { 0x57 })
-                    }
 
-                    Return (Package ()
-                    {
-                        "address", 
-                        0x57
-                    })
-                }
-            }
+            Return (Package ()
+            {
+                "address", 0x57
+            })
         }
     }
 }

@@ -1,3 +1,8 @@
+/*
+ *  Provides USB host controller device properties
+ *  Likely conflicts with any SSDT with USBX in the name
+ */
+
 DefinitionBlock ("", "SSDT", 1, "vulgo", "UsbxSsdt", 1)
 {
     If (_OSI ("Darwin"))
@@ -5,29 +10,22 @@ DefinitionBlock ("", "SSDT", 1, "vulgo", "UsbxSsdt", 1)
         Device (_SB.USBX)
         {
             Name (_ADR, Zero)
-            
-            Method (_DSM, 4, NotSerialized)
+        }
+        
+        Method (_SB.USBX._DSM, 4, NotSerialized)
+        {
+            If (!Arg2)
             {
-                If (!Arg2)
-                {
-                    Return (Buffer ()
-                    {
-                         0x3
-                    })
-                }
-
-                Return (Package ()
-                {
-                    "kUSBSleepPortCurrentLimit", 
-                    0x0834, 
-                    "kUSBSleepPowerSupply", 
-                    0x13EC, 
-                    "kUSBWakePortCurrentLimit", 
-                    0x0834, 
-                    "kUSBWakePowerSupply", 
-                    0x13EC
-                })
+                Return (Buffer (One) { 0x3 })
             }
+
+            Return (Package ()
+            {
+                "kUSBSleepPortCurrentLimit", 2100, 
+                "kUSBSleepPowerSupply", 5100, 
+                "kUSBWakePortCurrentLimit", 2100, 
+                "kUSBWakePowerSupply", 5100
+            })
         }
     }
 }

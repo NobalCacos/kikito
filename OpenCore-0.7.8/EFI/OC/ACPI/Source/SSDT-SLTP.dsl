@@ -1,3 +1,8 @@
+/*
+ *  Enables an IOPMSystemSleepType registry property
+ *  that can be read by various device drivers
+ */
+
 DefinitionBlock ("", "SSDT", 1, "vulgo", "SltpSsdt", 1)
 {    
     Name (SLTP, Zero)
