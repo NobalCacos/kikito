@@ -19,8 +19,9 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 - Built-in audio
 - Built-in ethernet
 - Airport and Bluetooth using a natively supported device
-- CPU power management
 - USB
+- CPU power management
+- PCI active-state power management
 - System wake, sleep, and shutdown
 - macOS installation and updates
 - System stability
@@ -82,7 +83,7 @@ Source: [dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#int
 
 The default `config.plist` in this repo targets Haswell systems with a supported AMD graphics card.
 
-> If your system is AMD + Haswell connectorless iGPU then graphics-related changes to the default ```config.plist``` may not be required
+> If your system has a Haswell CPU and uses a supported AMD graphics card then graphics-related changes to the default ```config.plist``` may not be required.
 
 In all other cases, refer to [README-Intel-Graphics.md](/README/README-Intel-Graphics.md)
 

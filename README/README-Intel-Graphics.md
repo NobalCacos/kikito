@@ -31,11 +31,11 @@ Edit the ```PlatformInfo``` section of your ```config.plist``` so that the ```Sy
 ...
 ````
 
-| SystemProductName | Graphics Configuration     | Intel Framebuffer |
-|:------------------|:---------------------------|:------------------|
-| iMac18,1          | Haswell HD Graphics        | Attached display  |
-| iMac16,2          | Broadwell                  | Attached display  |
-| iMac18,2          | Haswell PCIe graphics card | Connectorless     |
+| SystemProductName | Graphics Configuration         | Intel Framebuffer |
+|:------------------|:-------------------------------|:------------------|
+| iMac18,1          | Haswell HD Graphics            | Attached display  |
+| iMac16,2          | Broadwell                      | Attached display  |
+| iMac18,2          | Haswell PCIe AMD graphics card | Connectorless     |
 
 ## iGPU Device Properties
 
@@ -79,7 +79,7 @@ Edit the `DeviceProperties` section of your `config.plist` according to your con
 
 <details><summary><strong>Broadwell</strong></summary><br>
 
-> Broadwell Iris Pro configurations use the `iMac16,2` model identifier. Discrete graphics cards should also be working with these properties.
+> Broadwell Iris Pro configurations use the `iMac16,2` model identifier. Supported AMD graphics cards should also be working with these properties.
 
 ```xml
 ...
@@ -113,9 +113,9 @@ Edit the `DeviceProperties` section of your `config.plist` according to your con
 
 </details>
 
-<details><summary><strong>Haswell PCIe graphics card</strong></summary><br>
+<details><summary><strong>Haswell PCIe AMD graphics card</strong></summary><br>
 
-> When a supported PCIe graphics card is installed it is recommended to configure the Haswell iGPU to use a connectorless framebuffer. Haswell connectorless configurations use the `iMac18,2` model identifier.
+> When a supported PCIe AMD graphics card is installed it is recommended to configure the Haswell iGPU to use a connectorless framebuffer. Haswell connectorless configurations use the `iMac18,2` model identifier.
 
 ```xml
 ...

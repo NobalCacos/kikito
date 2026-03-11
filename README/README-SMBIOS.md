@@ -2,15 +2,32 @@
 
 OpenCore will generate a complete [SMBIOS](https://en.wikipedia.org/wiki/System_Management_BIOS) for your system according to information provided in the `PlatformInfo` section of `config.plist` and a dataset derived from Apple firmwares. `GenSMBIOS` is a python script that uses acidanthera's `macserial` to generate required serials and unique identifiers.
 
-The model identifier used to generate serials should match `SystemProductName` in the `PlatformInfo` section of your `config.plist`.
+<details><summary>The model identifier used to generate serials should match <code>SystemProductName</code> in the <code>PlatformInfo</code> section of your <code>config.plist</code></summary><br>
 
-Refer to [README-Intel-Graphics.md](/README/README-Intel-Graphics.md) if necessary.
+```xml
+...
+<key>PlatformInfo</key>
+<dict>
+    ...
+    <key>Generic</key>
+    <dict>
+        ...
+        <key>SystemProductName</key>
+        <string>iMac18,2</string>
+        ...
+    </dict>
+    ...
+</dict>
+...
+````
 
-| Model Identifier | Graphics Configuration     |
-|:-----------------|:---------------------------|
-| iMac18,2         | Haswell PCIe graphics card |
-| iMac18,1         | Haswell HD Graphics        |
-| iMac16,2         | Broadwell                  |
+</details>
+
+| Model Identifier | Graphics Configuration         |
+|:-----------------|:-------------------------------|
+| iMac18,2         | Haswell PCIe AMD graphics card |
+| iMac18,1         | Haswell HD Graphics            |
+| iMac16,2         | Broadwell                      |
 
 ## Download GenSMBIOS
 
