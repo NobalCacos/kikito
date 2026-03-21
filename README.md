@@ -21,7 +21,7 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 - Airport and Bluetooth using a natively supported device
 - USB
 - CPU power management
-- PCI active-state power management
+- PCIe active-state power management
 - System wake, sleep, and shutdown
 - macOS installation and updates
 - System stability
@@ -33,7 +33,7 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 - [Apple ID problems](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html)
 - UEFI Secure Boot
 - [OpenCore Security and FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html)
-- Airport and Bluetooth using a device that is not natively supported
+- [Airport and Bluetooth using a device that is not natively supported](https://github.com/acidanthera/AirportBrcmFixup)
 - [DRM and hardware video decoding or encoding](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md)
 - [NVMe problems](https://github.com/acidanthera/NVMeFix)
 
