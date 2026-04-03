@@ -1,6 +1,10 @@
 # SMBIOS
 
+<details><summary><strong>What's this?</strong></summary>
+
 OpenCore will generate a complete [SMBIOS](https://en.wikipedia.org/wiki/System_Management_BIOS) for your system according to information provided in the `PlatformInfo` section of `config.plist` and a dataset derived from Apple firmwares. `GenSMBIOS` is a python script that uses acidanthera's `macserial` to generate required serials and unique identifiers.
+
+</details>
 
 <details><summary>The model identifier used to generate serials should match <code>SystemProductName</code> in the <code>PlatformInfo</code> section of your <code>config.plist</code></summary><br>
 
@@ -21,7 +25,7 @@ OpenCore will generate a complete [SMBIOS](https://en.wikipedia.org/wiki/System_
 ...
 ````
 
-</details>
+</details><br>
 
 | Model Identifier | Graphics Configuration         |
 |:-----------------|:-------------------------------|
