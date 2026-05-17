@@ -16,7 +16,7 @@ Utility to validate whether a `config.plist` matches requirements and convention
 ### Global Rules
 - All entries must be set once only. Duplication is strictly prohibited.
 - All strings (fields with plist `String` format) throughout the whole config only accept ASCII printable characters at most. Stricter rules may apply. For instance, some fields only accept specified values, as indicated in [Configuration.pdf](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf).
-- All the paths relative to OpenCore root must be 128 bytes total including '\0' terminator.
+- All the paths relative to OpenCore root must be less than or equal to 128 bytes (`OC_STORAGE_SAFE_PATH_MAX`) in total including '\0' terminator.
 - Most binary patches must have `Find`, `Replace`, `Mask` (if used), and `ReplaceMask` (if used) identical size set. Also, `Find` requires `Mask` (or `Replace` requires `ReplaceMask`) to be active (set to non-zero) for corresponding bits.
 - `MinKernel` and `MaxKernel` entries should follow conventions specified in [Configuration.pdf](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf). (TODO: Bring decent checks for this)
 - `MinKernel` cannot be a value that is below macOS 10.4 (Darwin version 8).
@@ -78,6 +78,12 @@ Utility to validate whether a `config.plist` matches requirements and convention
 - DmgLoading: Only `Disabled`, `Signed`, or `Any` are accepted.
 - Vault: Only `Optional`, `Basic`, or `Secure` are accepted.
 - SecureBootModel: Only `Default`, `Disabled`, `j137`, `j680`, `j132`, `j174`, `j140k`, `j780`, `j213`, `j140a`, `j152f`, `j160`, `j230k`, `j214k`, `j223`, `j215`, `j185`, `j185f`, or `x86legacy` are accepted.
+#### Serial
+- RegisterAccessWidth: Only `8` or `32` are accepted.
+- BaudRate: Only `921600`, `460800`, `230400`, `115200`, `57600`, `38400`, `19200`, `9600`, `7200`, `4800`, `3600`, `2400`, `2000`, `1800`, `1200`, `600`, `300`, `150`, `134`, `110`, `75`, or `50` are accepted.
+- PciDeviceInfo: The last byte must be `0xFF`.
+- PciDeviceInfo: Excluding the last byte `0xFF`, the rest must be divisible by 4.
+- PciDeviceInfo: Maximum allowed size is 41.
 
 ### NVRAM
 - Requirements here all follow Global Rules. In addition, the following keys and values are checked:
