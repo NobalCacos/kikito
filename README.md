@@ -34,6 +34,7 @@ OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherb
 - UEFI Secure Boot
 - [OpenCore Security and FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html)
 - Airport and Bluetooth using a device that is not natively supported
+    - [BrcmPatchRam](https://github.com/acidanthera/BrcmPatchRAM)
     - [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
     - [OpenIntelWireless](https://github.com/OpenIntelWireless)
 - [DRM and hardware video decoding or encoding](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md)
