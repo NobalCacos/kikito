@@ -175,7 +175,7 @@ let kInfoPlistSourceDictionary: [String: Any] = {
 	"""
 	
 	do {
-		guard let data: Data = .init(base64Encoded: sourceData, options: .ignoreUnknownCharacters) else {
+		guard let data = Data(base64Encoded: sourceData, options: [.ignoreUnknownCharacters]) else {
 			throw USBTool.RuntimeError("failed to decode property list data from base64")
 		}
 		
