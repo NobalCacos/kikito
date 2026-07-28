@@ -1,5 +1,7 @@
 # H97N-WIFI Hackintosh
 
+**macOS 13 is not supported at this time by this repository.**
+
 OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherboard. Without obsolete or cosmetic patches, the goal is simply macOS 12 working well on compatible hardware.
 
 <details><summary><strong>Notes</strong></summary><br>

@@ -113,13 +113,11 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<!-- Intel Graphics: add device properties -->
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BAASBA==</data>
 			</dict>
-			<!-- Built in audio: add layout-id -->
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
 				<key>layout-id</key>
