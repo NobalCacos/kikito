@@ -1,6 +1,6 @@
 # H97N-WIFI Hackintosh
 
-**macOS 13 is not supported at this time by this repository.**
+**macOS 13 is not supported by this repository - refer to [macOS Ventura and OpenCore Legacy Patcher Support](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/998)**
 
 OpenCore configuration for running macOS 12 on the Gigabyte GA-H97N-WIFI motherboard. Without obsolete or cosmetic patches, the goal is simply macOS 12 working well on compatible hardware.
 
