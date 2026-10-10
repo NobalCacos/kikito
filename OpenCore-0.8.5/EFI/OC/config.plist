@@ -524,9 +524,9 @@
 				<key>prev-lang:kbd</key>
 				<data></data>
 				<key>boot-args</key>
-				<string>keepsyms=1</string>
+				<string>keepsyms=1 amfi_get_out_of_my_way=1</string>
 				<key>csr-active-config</key>
-				<data>AAAAAA==</data>
+				<data>AwgAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
