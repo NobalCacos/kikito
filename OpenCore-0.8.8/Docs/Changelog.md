@@ -1,5 +1,43 @@
 OpenCore Changelog
 ==================
+#### v0.8.8
+- Updated underlying EDK II package to edk2-stable202211
+- Updated AppleKeyboardLayouts.txt from macOS 13.1
+- Updated builtin firmware versions for SMBIOS and the rest
+- Updated ocvalidate to allow duplicate tool if FullNvramAccess is different
+- Fixed `Kernel` -> `Block` entries not being processed if one was skipped due to `Arch`
+- Fixed intermittent prelinking failures caused by XML corruption when kext blocking is enabled
+- Removed magic Acidanthera sequence from OpenCore files used for picker hiding
+- Added `.contentVisibility` to hide and disable boot entries
+- Added Linux support to QemuBuild.command used for Duet debugging
+- Built in new secure PE/COFF loader
+- Added prebuilt mtoc universal binary with Apple Silicon support
+- Corrected OpenDuet build on Apple Silicon
+- Added SD card device path support for boot device selection
+
+#### v0.8.7
+- Removed unwanted clear screen when launching non-text boot entry
+- Fixed TSC/FSB for AMD CPUs in ProvideCurrentCpuInfo, thx @Shaneee
+- Added `Misc` -> `Boot` -> `HibernateSkipsPicker` not to show picker if waking from macOS hibernation
+- Changed macrecovery to download files into `com.apple.recovery.boot` by default, thx @dreamwhite
+- Supported Apple builtin picker (using `BootKicker.efi` or `PickerMode` `Apple`) when running GPUs without Mac-EFI support on units such as the MacPro5,1 (thx @cdf, @tsialex)
+- Enabled `PickerMode` `Apple` to successfully launch selected entry
+- Enabled `BootKicker.efi` to successfully launch selected entry (via reboot) (thx @cdf)
+- Added spoof proof UEFI 2.x checking to OpenVariableRuntimeDxe, thx @dakanji
+
+#### v0.8.6
+- Updated NVRAM save script for compatibilty with earlier macOS (Snow Leopard+ tested)
+- Updated NVRAM save script to automatically install as launch daemon (Yosemite+) or logout hook (older macOS)
+- Fixed maximum click duration and double click speed for non-standard poll frequencies
+- Added support for pointer dwell-clicking
+- Fixed recursive loop crash at first non-early log line on some systems
+- Fixed early log preservation when using unsafe fast file logging
+- Updated builtin firmware versions for SMBIOS and the rest
+- Resolved wake-from-sleep failure on EFI 1.1 systems (including earlier Macs) with standalone emulated NVRAM driver
+- Updated macrecovery commands with macOS 12 and 13, thx @Core-i99
+- Updates SSDT-BRG0 with macOS-specific STA to avoid compatibility issues on Windows, thx @Lorys89
+- Fixed memory issues in OpenLinuxBoot causing crashes on 32-bit UEFI firmware
+
 #### v0.8.5
 - Updated builtin firmware versions for SMBIOS and the rest
 - Moved CPU objects that exist only in Windows Server 2022 into `SSDT-HV-DEV-WS2022.dsl`
@@ -278,7 +316,7 @@ OpenCore Changelog
 - Fixed ACPI table magic corruption during patching
 - Fixed unnatural OpenCanopy and FileVault 2 cursor movement
 - Fixed OpenCanopy interrupt handling causing missed events and lag
-- Improved OpenCanopy double-click detection 
+- Improved OpenCanopy double-click detection
 - Reduced OpenCanopy touch input lag and improved usability
 - Improved keypress responsiveness in OpenCanopy and builtin pickers
 - Improved non-repeating key detection in OpenCanopy and builtin pickers
